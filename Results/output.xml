@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210718 21:38:52.081" rpa="false" schemaversion="2">
+<suite id="s1" name="BasicSearch" source="D:\SETUP\AUTOMATION\Robot-Framework\Project\FirstTime\Tests\Youtube\BasicSearch.robot">
+<test id="s1-t1" name="TC_01_Verify_Basic_Searching_Function_For_Youtube">
+<kw name="open website" library="Action" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path= ${PATH_DRIVER}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20210718 21:38:53.255" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210718 21:38:53.254" endtime="20210718 21:38:54.598"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210718 21:38:54.598" level="INFO">Opening url 'https://www.youtube.com/'</msg>
+<status status="PASS" starttime="20210718 21:38:54.598" endtime="20210718 21:38:57.222"/>
+</kw>
+<status status="PASS" starttime="20210718 21:38:53.254" endtime="20210718 21:38:57.222"/>
+</kw>
+<kw name="search function">
+<arg>Audio Hắc Ám Tây Du Ký</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id="search"]</arg>
+<arg>${key_word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210718 21:38:57.226" level="INFO">Typing text 'Audio Hắc Ám Tây Du Ký' into text field '//input[@id="search"]'.</msg>
+<status status="PASS" starttime="20210718 21:38:57.225" endtime="20210718 21:38:57.858"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//button[@id="search-icon-legacy"]</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210718 21:38:57.859" level="INFO">Sending key(s) ('[Return]',) to //button[@id="search-icon-legacy"] element.</msg>
+<msg timestamp="20210718 21:38:58.267" level="INFO">Sending keys [Return]</msg>
+<status status="PASS" starttime="20210718 21:38:57.858" endtime="20210718 21:38:58.290"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[contains(text(), "${key_word}")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210718 21:38:58.291" endtime="20210718 21:38:59.533"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), "${key_word}")]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210718 21:38:59.547" level="INFO">Current page contains element '//span[contains(text(), "Audio Hắc Ám Tây Du Ký")]'.</msg>
+<status status="PASS" starttime="20210718 21:38:59.533" endtime="20210718 21:38:59.547"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//span[contains(text(), "${key_word}")]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210718 21:38:59.547" endtime="20210718 21:38:59.613"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), "${key_word}")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210718 21:38:59.614" level="INFO">Clicking element '//span[contains(text(), "Audio Hắc Ám Tây Du Ký")]'.</msg>
+<status status="PASS" starttime="20210718 21:38:59.614" endtime="20210718 21:38:59.698"/>
+</kw>
+<status status="PASS" starttime="20210718 21:38:57.224" endtime="20210718 21:38:59.699"/>
+</kw>
+<kw name="close website" library="Action" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210718 21:38:59.701" endtime="20210718 21:39:02.146"/>
+</kw>
+<status status="PASS" starttime="20210718 21:38:59.700" endtime="20210718 21:39:02.146"/>
+</kw>
+<tag>Functional</tag>
+<status status="PASS" starttime="20210718 21:38:53.252" endtime="20210718 21:39:02.147"/>
+</test>
+<test id="s1-t2" name="TC_01_Verify_Basic_Searching_Function_For_Youtube">
+<kw name="open website" library="Action" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path= ${PATH_DRIVER}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20210718 21:39:02.153" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210718 21:39:02.153" endtime="20210718 21:39:03.429"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210718 21:39:03.430" level="INFO">Opening url 'https://www.youtube.com/'</msg>
+<status status="PASS" starttime="20210718 21:39:03.430" endtime="20210718 21:39:06.070"/>
+</kw>
+<status status="PASS" starttime="20210718 21:39:02.152" endtime="20210718 21:39:06.071"/>
+</kw>
+<kw name="search function">
+<arg>TÂN TÂY DU KÝ</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id="search"]</arg>
+<arg>${key_word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210718 21:39:06.072" level="INFO">Typing text 'TÂN TÂY DU KÝ' into text field '//input[@id="search"]'.</msg>
+<status status="PASS" starttime="20210718 21:39:06.071" endtime="20210718 21:39:06.601"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//button[@id="search-icon-legacy"]</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210718 21:39:06.602" level="INFO">Sending key(s) ('[Return]',) to //button[@id="search-icon-legacy"] element.</msg>
+<msg timestamp="20210718 21:39:07.149" level="INFO">Sending keys [Return]</msg>
+<status status="PASS" starttime="20210718 21:39:06.601" endtime="20210718 21:39:07.163"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[contains(text(), "${key_word}")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210718 21:39:07.163" endtime="20210718 21:39:08.253"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), "${key_word}")]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210718 21:39:08.357" level="INFO">Current page contains element '//span[contains(text(), "TÂN TÂY DU KÝ")]'.</msg>
+<status status="PASS" starttime="20210718 21:39:08.253" endtime="20210718 21:39:08.357"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//span[contains(text(), "${key_word}")]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210718 21:39:08.358" endtime="20210718 21:39:08.552"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), "${key_word}")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210718 21:39:08.553" level="INFO">Clicking element '//span[contains(text(), "TÂN TÂY DU KÝ")]'.</msg>
+<status status="PASS" starttime="20210718 21:39:08.553" endtime="20210718 21:39:08.642"/>
+</kw>
+<status status="PASS" starttime="20210718 21:39:06.071" endtime="20210718 21:39:08.643"/>
+</kw>
+<kw name="close website" library="Action" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210718 21:39:08.643" endtime="20210718 21:39:11.003"/>
+</kw>
+<status status="PASS" starttime="20210718 21:39:08.643" endtime="20210718 21:39:11.003"/>
+</kw>
+<tag>Functional</tag>
+<status status="PASS" starttime="20210718 21:39:02.149" endtime="20210718 21:39:11.004"/>
+</test>
+<test id="s1-t3" name="TC_01_Verify_Basic_Searching_Function_For_Youtube">
+<kw name="open website" library="Action" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path= ${PATH_DRIVER}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20210718 21:39:11.008" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210718 21:39:11.007" endtime="20210718 21:39:12.297"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210718 21:39:12.298" level="INFO">Opening url 'https://www.youtube.com/'</msg>
+<status status="PASS" starttime="20210718 21:39:12.297" endtime="20210718 21:39:14.927"/>
+</kw>
+<status status="PASS" starttime="20210718 21:39:11.007" endtime="20210718 21:39:14.927"/>
+</kw>
+<kw name="search function">
+<arg>THIÊN LONG BÁT BỘ</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id="search"]</arg>
+<arg>${key_word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210718 21:39:14.930" level="INFO">Typing text 'THIÊN LONG BÁT BỘ' into text field '//input[@id="search"]'.</msg>
+<status status="PASS" starttime="20210718 21:39:14.929" endtime="20210718 21:39:15.428"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//button[@id="search-icon-legacy"]</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210718 21:39:15.429" level="INFO">Sending key(s) ('[Return]',) to //button[@id="search-icon-legacy"] element.</msg>
+<msg timestamp="20210718 21:39:15.832" level="INFO">Sending keys [Return]</msg>
+<status status="PASS" starttime="20210718 21:39:15.429" endtime="20210718 21:39:15.862"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[contains(text(), "${key_word}")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210718 21:39:15.863" endtime="20210718 21:39:17.151"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), "${key_word}")]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210718 21:39:17.282" level="INFO">Current page contains element '//span[contains(text(), "THIÊN LONG BÁT BỘ")]'.</msg>
+<status status="PASS" starttime="20210718 21:39:17.152" endtime="20210718 21:39:17.282"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//span[contains(text(), "${key_word}")]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210718 21:39:17.282" endtime="20210718 21:39:17.377"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), "${key_word}")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210718 21:39:17.378" level="INFO">Clicking element '//span[contains(text(), "THIÊN LONG BÁT BỘ")]'.</msg>
+<status status="PASS" starttime="20210718 21:39:17.378" endtime="20210718 21:39:17.504"/>
+</kw>
+<status status="PASS" starttime="20210718 21:39:14.929" endtime="20210718 21:39:17.504"/>
+</kw>
+<kw name="close website" library="Action" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210718 21:39:17.508" endtime="20210718 21:39:19.817"/>
+</kw>
+<status status="PASS" starttime="20210718 21:39:17.507" endtime="20210718 21:39:19.818"/>
+</kw>
+<tag>Functional</tag>
+<status status="PASS" starttime="20210718 21:39:11.005" endtime="20210718 21:39:19.818"/>
+</test>
+<doc>Basic Searching Function Youtube</doc>
+<status status="PASS" starttime="20210718 21:38:52.083" endtime="20210718 21:39:19.822"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">Functional</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="BasicSearch">BasicSearch</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210718 21:39:02.149" level="WARN">Multiple test cases with name 'TC_01_Verify_Basic_Searching_Function_For_Youtube' executed in test suite 'BasicSearch'.</msg>
+<msg timestamp="20210718 21:39:11.005" level="WARN">Multiple test cases with name 'TC_01_Verify_Basic_Searching_Function_For_Youtube' executed in test suite 'BasicSearch'.</msg>
+</errors>
+</robot>
